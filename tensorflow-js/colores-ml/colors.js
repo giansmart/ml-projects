@@ -56,7 +56,7 @@ async function loadModel(){
 }
 
 async function update(color){
-    //Aqui hacemos el objeto "rgb" para que sea similar al video
+    //obtenemos el color seleccionado
     var rgb = [color.channels.r, color.channels.g, color.channels.b];
     console.log(rgb);
     var divcolor = document.getElementById('color-zone');
@@ -74,8 +74,7 @@ async function update(color){
     console.log({color_predicted})
     //console.log('predicted value: '+ color_predicted);
 
-    //imprimir la prediccion del color
-    //console.log(resultado)
+    //la probabilidad de que sea blanco
     if( color_predicted > .5){
         divcolor.style.color = 'white';
     } else{
